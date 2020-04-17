@@ -9,7 +9,7 @@ export default {
 // By passing optional props to this story, you can control the props of the component when
 // you consume the story in a test.
 export const CardTable = () => {
-  const dataSource = [{ title: 'a', description: 'b' }];
+  const dataSource = [{ key: 0, title: 'a', description: 'b' }];
   const columns = [
     { title: 'Title', dataIndex: 'title', key: 'title' },
     { title: 'Description', dataIndex: 'description', key: 'description' },

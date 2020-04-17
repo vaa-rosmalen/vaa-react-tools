@@ -1,4 +1,5 @@
 import React from 'react';
+import '../__mocks__/matchMedia.mock';
 import * as ReactDOM from 'react-dom';
 import { CardTable } from '../stories/Table.stories';
 

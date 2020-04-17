@@ -34,6 +34,21 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|scss)$": "identity-obj-proxy"
+    }
+  },
   "name": "vaa-react-tools",
   "author": "Justin Steenhuis",
   "module": "dist/vaa-react-tools.esm.js",
@@ -69,5 +84,8 @@
     "tsdx": "^0.13.2",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "identity-obj-proxy": "^3.0.0"
   }
 }
