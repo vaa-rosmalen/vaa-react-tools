@@ -36,17 +36,19 @@ jobs:
         env:
           CI: true
 
-      - name: Build Storybook
-        run: npm run build-storybook
+      - name: Build
+        run: npm run build
         env:
           CI: true
-
-      - name: Configurate git
-        run: |
-          git config --local user.email "justinsteenhuis@gmail.com"
-          git config --local user.name "GitHub Action"
-
-      - name: Release Storybook
-        run: npm run release-storybook
-        env:
-          CI: true
+      # - name: Build Storybook
+      #   run: npm run build-storybook
+      #   env:
+      #     CI: true
+      # - name: Configurate git
+      #   run: |
+      #     git config --local user.email "justinsteenhuis@gmail.com"
+      #     git config --local user.name "GitHub Action"
+      # - name: Release Storybook
+      #   run: npm run release-storybook
+      #   env:
+      #     CI: true
