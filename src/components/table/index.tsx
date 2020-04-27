@@ -1,6 +1,6 @@
 import React, { useState, MutableRefObject } from 'react';
 import { Table as AntdTable } from 'antd';
-import './styles.scss';
+import styles from './styles.module.scss';
 import { TablePaginationConfig } from 'antd/lib/table';
 
 export const defaultSorterFunction = sortBy => (a, b, _sortOrder?) => {
@@ -15,24 +15,29 @@ export const Table = ({
   columns,
   pagination = true,
   paginationConfig,
+  maxContent = false,
 }: {
   ref?: MutableRefObject<any>;
   dataSource;
   columns;
   pagination?: boolean;
   paginationConfig?: TablePaginationConfig;
+  maxContent?: boolean;
 }) => {
   const [pageSize, setPageSize] = useState(5);
   const [page, setPage] = useState(1);
   return (
-    <div ref={ref} className="vaa-table">
+    <div ref={ref} className={styles.vaaTable}>
       <AntdTable
         style={{ borderRadius: '5px' }}
         dataSource={dataSource}
         columns={columns}
         size="middle"
         sortDirections={['ascend', 'descend']}
-        scroll={{ x: 'max-content', scrollToFirstRowOnChange: true }}
+        scroll={{
+          x: maxContent ? 'max-content' : undefined,
+          scrollToFirstRowOnChange: true,
+        }}
         pagination={
           pagination
             ? paginationConfig

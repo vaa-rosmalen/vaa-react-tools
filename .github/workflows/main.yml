@@ -8,35 +8,40 @@ jobs:
       - name: Begin CI...
         uses: actions/checkout@v2
 
-      - name: Use Node 12
+      - name: Use Node 13
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 13.x
 
-      - name: Use cached node_modules
+      - name: Use cached npm
         uses: actions/cache@v1
         with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            nodeModules-
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm install
         env:
           CI: true
 
       - name: Lint
-        run: yarn lint
+        run: npm run lint
         env:
           CI: true
 
       - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
+        run: npm run test --ci --coverage --maxWorkers=2
         env:
           CI: true
 
       - name: Build
-        run: yarn build
+        run: npm run build-storybook
+        env:
+          CI: true
+
+      - name: Build
+        run: npm run release-storybook
         env:
           CI: true
