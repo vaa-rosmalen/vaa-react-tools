@@ -1,5 +1,7 @@
 # VAA-React-Tools User Guide
 
+![CI](https://github.com/vaa-rosmalen/vaa-react-tools/workflows/CI/badge.svg)
+
 ## Install this library
 
 ```

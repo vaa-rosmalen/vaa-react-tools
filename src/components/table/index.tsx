@@ -1,6 +1,6 @@
 import React, { useState, MutableRefObject } from 'react';
 import { Table as AntdTable } from 'antd';
-import styles from './styles.module.scss';
+import './styles.scss';
 import { TablePaginationConfig } from 'antd/lib/table';
 
 export const defaultSorterFunction = sortBy => (a, b, _sortOrder?) => {
@@ -27,7 +27,7 @@ export const Table = ({
   const [pageSize, setPageSize] = useState(5);
   const [page, setPage] = useState(1);
   return (
-    <div ref={ref} className={styles.vaaTable}>
+    <div ref={ref} className="vaaTable">
       <AntdTable
         style={{ borderRadius: '5px' }}
         dataSource={dataSource}
