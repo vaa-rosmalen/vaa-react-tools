@@ -1,0 +1,37 @@
+.vaaTable {
+  :global {
+    .ant-table table {
+      margin-top: 1px;
+    }
+
+    thead > tr > th {
+      background-color: #fff;
+    }
+
+    .ant-table-pagination.ant-pagination {
+      margin: 24px;
+    }
+
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 24px;
+    }
+
+    ul.ant-table-pagination {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        order: 2;
+      }
+
+      li.ant-pagination-options {
+        order: 1;
+      }
+
+      li.ant-pagination-total-text {
+        margin-right: 30px;
+      }
+    }
+  }
+}

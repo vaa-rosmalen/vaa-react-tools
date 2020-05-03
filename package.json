@@ -1,5 +1,5 @@
 {
-  "version": "0.3.0",
+  "version": "0.6.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -35,7 +35,8 @@
     "printWidth": 80,
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "arrowParens": "always"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -87,9 +88,7 @@
     "ts-loader": "^7.0.0",
     "tsdx": "^0.13.2",
     "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "antd": "^4.1.0"
+    "typescript": "^3.8.3",
+    "antd": "^4.2.0"
   }
 }
