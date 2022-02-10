@@ -75,7 +75,7 @@
     "gh-pages": "^2.2.0",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
